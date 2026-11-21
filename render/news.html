@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>The World on 20 November 2026</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; width: 1024px; height: 1024px; padding: 36px; color: #192923; background: #f1eee3; }
+  header { height: 192px; position: relative; padding: 12px 6px; border-top: 6px solid #192923; }
+  h1 { margin: 0; font: 700 37px Arial, sans-serif; letter-spacing: 5px; }
+  h1 span { display: block; margin-top: 2px; font: 700 75px Georgia, serif; letter-spacing: -3px; }
+  main { display: grid; grid-template-columns: repeat(2, 1fr); grid-auto-rows: 179px; gap: 15px; }
+  article { display: grid; grid-template-columns: 139px 1fr; align-items: center; gap: 15px; padding: 13px; background: #fffdf6; border: 1px solid #c5c9bb; }
+  article svg { width: 139px; height: 139px; background: var(--wash); color: var(--ink); }
+  .region { margin: 0 0 8px; color: #43544b; font: 700 19px Arial, sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+  h2 { margin: 0; font: 700 33px/1.04 "Barlow Condensed", "Liberation Sans Narrow", sans-serif; }
+  h2 span { display: block; }
+  .globe { position: absolute; top: 18px; right: 9px; width: 137px; height: 137px; color: #326254; }
+</style>
+<header>
+  <h1>THE WORLD ON <span>20 NOVEMBER 2026</span></h1>
+  <svg class="globe" viewBox="0 0 120 120" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="2.6">
+      <circle cx="60" cy="60" r="49"/>
+      <ellipse cx="60" cy="60" rx="25" ry="49"/>
+      <path d="M60 11v98M11 60h98M21 31q39 20 78 0M21 89q39-20 78 0"/>
+    </g>
+  </svg>
+</header>
+<main></main>
+<script>
+  const stories = [
+    {
+      region: 'Ukraine', headline: ['Russia strikes', 'three Kyiv bridges'], wash: '#e2e9f2', ink: '#24466a',
+      art: `
+        <circle cx="60" cy="56" r="39" fill="#f5cc67" stroke="none"/>
+        <path d="M7 82h106v25H7z" fill="#a6c4dd" stroke="none"/>
+        <path d="M9 73h102M22 72V41m38 31V35m38 37V41M22 43l20 29m18-36L40 72m20-36 20 36m18-29L78 72M22 75v16m38-16v16m38-16v16"/>
+        <path d="M12 101q8-5 16 0t16 0 16 0 16 0 16 0 16 0" stroke-width="2"/>
+        <path d="m91 13-7 9 7 1-6 9m20-10-7 9" stroke="#a34b39"/>
+      `
+    },
+    {
+      region: 'Türkiye · Climate', headline: ['COP31 talks', 'go into overtime'], wash: '#dcece0', ink: '#285845',
+      art: `
+        <circle cx="52" cy="57" r="35" fill="#a9cbb2"/>
+        <ellipse cx="52" cy="57" rx="16" ry="35"/>
+        <path d="M17 57h70M24 37q28 13 56 0M24 77q28-13 56 0"/>
+        <circle cx="86" cy="83" r="23" fill="#fffdf3"/>
+        <path d="M86 68v15l9 6M92 19h12m-6-6v12"/>
+      `
+    },
+    {
+      region: 'Myanmar · Justice', headline: ['Myanmar rejects', 'Rohingya genocide', 'ruling'], wash: '#f2e6ce', ink: '#674e30',
+      art: `
+        <path d="M25 94h70v10H25zM35 84h50v10H35z" fill="#d5a968"/>
+        <path d="M60 32v51M24 41h72"/>
+        <circle cx="60" cy="29" r="6" fill="#fff8e9"/>
+        <path d="m29 42-14 28h28L29 42Zm62 0L77 70h28L91 42Z" fill="#fff8e9"/>
+        <path d="M15 70q14 22 28 0m34 0q14 22 28 0" fill="#d5a968"/>
+      `
+    },
+    {
+      region: 'Saudi Arabia · Yemen', headline: ['Saudi forces intercept', 'Houthi missile'], wash: '#f1e4d9', ink: '#7e4235',
+      art: `
+        <path d="M9 98h102M13 97l18-21 15 16 11-10 18 16" stroke-width="2"/>
+        <path d="M62 39q13 0 24-8 11 8 24 8v17q0 23-24 35-24-12-24-35z" fill="#dca997"/>
+        <path d="m76 59 7 7 13-15"/>
+        <path d="M15 46q14-17 36-16m-6-8 8 8-9 5M57 13v7m12-4-6 7" />
+      `
+    },
+    {
+      region: 'United States · Markets', headline: ['AI sell-off pulls', 'S&amp;P 500 down 3.7%'], wash: '#f3dedb', ink: '#8e362f',
+      art: `
+        <path d="M16 20v78h88M19 42h83M19 65h83" stroke="#bc8b81" stroke-width="2"/>
+        <path d="M28 78h11v19H28zm20-8h11v27H48zm20 10h11v17H68zm20 8h11v9H88z" fill="#ce9084" stroke="none"/>
+        <path d="m23 31 19 10 14-4 17 21 12-2 17 19m-15-2 15 2-1-15" stroke-width="5"/>
+      `
+    },
+    {
+      region: 'Peru · Earthquake', headline: ['Magnitude 6.7 quake', 'shakes Peru’s Andes'], wash: '#eae2f0', ink: '#55416f',
+      art: `
+        <circle cx="85" cy="29" r="14" fill="#f2c783" stroke="none"/>
+        <path d="m10 75 30-41 15 20 19-25 34 46z" fill="#b5a4cb"/>
+        <path d="m32 46 8-12 9 12m16-4 9-13 11 14" stroke="#fffdf6"/>
+        <path d="M10 92h23l7-8 8 17 9-23 8 24 7-10h36" stroke-width="4"/>
+      `
+    },
+    {
+      region: 'France · Biomedicine', headline: ['French team unveils', 'lab-grown living skin'], wash: '#f3e1d9', ink: '#79463d',
+      art: `
+        <path d="M16 61v20c0 12 20 22 44 22s44-10 44-22V61" fill="#e8b1a1"/>
+        <ellipse cx="60" cy="61" rx="44" ry="23" fill="#fff3e9"/>
+        <path d="m31 57 28-10 31 12-29 12z" fill="#d98e7c"/>
+        <path d="m31 57 1 9 29 13 28-11 1-9M61 71v8M18 30h18m-9-9v18m59-9h15m-7-7v14"/>
+      `
+    },
+    {
+      region: 'Italy · Tennis', headline: ['Alcaraz beats Cobolli', 'at ATP Finals'], wash: '#e8edcc', ink: '#426044',
+      art: `
+        <path d="m15 105 33-34" stroke-width="10"/>
+        <ellipse cx="66" cy="50" rx="23" ry="32" transform="rotate(39 66 50)" fill="#fcf8de" stroke-width="5"/>
+        <path d="m67 24 22 21M56 32l26 26M47 43l24 27M50 61l28-34M60 68l28-32" stroke-width="2"/>
+        <circle cx="92" cy="89" r="16" fill="#cae06e"/>
+        <path d="M89 74q12 12 8 29m-17-5q7-2 12 1" stroke-width="2"/>
+      `
+    }
+  ];
+
+  const panels = stories.map(({ region, headline, wash, ink, art }) => `
+    <article style="--wash:${wash};--ink:${ink}">
+      <svg viewBox="0 0 120 120" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">${art}</g>
+      </svg>
+      <div>
+        <p class="region">${region}</p>
+        <h2>${headline.map(line => `<span>${line}</span>`).join('')}</h2>
+      </div>
+    </article>
+  `);
+  document.querySelector('main').innerHTML = panels.join('');
+</script>
+</html>
